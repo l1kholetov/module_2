@@ -11,6 +11,7 @@ export default [
       "indent": ["error", 2, { "VariableDeclarator": "first" }],
       "camelcase": "error",
       "no-undef": "error",
+      "no-constant-condition": "off",
       semi: ["error", "always"],
     },
   },
