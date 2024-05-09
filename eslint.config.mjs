@@ -1,18 +1,26 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
+import stylisticJs from '@stylistic/eslint-plugin-js';
 
 
 export default [
   {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
   {
+    plugins: {
+      '@stylistic/js': stylisticJs
+    },
+
     rules: {
+      semi: ["error", "always"],
+      curly: "error",
+      "@stylistic/js/max-len": ["error", { "code": 120 }],
+      "@stylistic/js/comma-dangle": ["error", "never"],
       "no-unused-vars": "off",
-      "indent": ["error", 2, { "VariableDeclarator": "first" }, { "SwitchCase": 2 }],
       "camelcase": "error",
       "no-undef": "error",
       "no-constant-condition": "off",
-      semi: ["error", "always"],
-    },
-  },
+      "indent": ["error", 2, { "VariableDeclarator": "first", "SwitchCase": 1 }]
+    }
+  }
 ];
