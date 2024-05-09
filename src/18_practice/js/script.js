@@ -25,7 +25,7 @@
 
 const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
 
-let personalMovieDB ={};
+let personalMovieDB = {};
 
 personalMovieDB = {
   "count": numberOfFilms,
@@ -33,6 +33,13 @@ personalMovieDB = {
   "actors": {},
   "genres": [],
   "privat": false
+};
+
+const lastFilm = prompt("Один из последних просмотренных фильмов?", "");
+const lastFilmRate = prompt("На сколько оцените его?", "");
+
+personalMovieDB['movies'] = {
+  lastFilm: lastFilmRate,
 };
 
 console.log(personalMovieDB);
