@@ -8,7 +8,7 @@ export default [
   {
     rules: {
       "no-unused-vars": "off",
-      "indent": ["error", 2, { "VariableDeclarator": "first" }],
+      "indent": ["error", 2, { "VariableDeclarator": "first" }, { "SwitchCase": 2 }],
       "camelcase": "error",
       "no-undef": "error",
       "no-constant-condition": "off",
