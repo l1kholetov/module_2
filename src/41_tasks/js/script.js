@@ -21,8 +21,8 @@ console.log(l);
 // 5) Выводится 1
 alert("1"[0]);
 
-// 6) Выводится false
-// (2 && 1 && null && 0 && undefined) ? console.log('true'): console.log('false');
+// 6) Выводится null
+// 2 && 1 && null && 0 && undefined
 
 // 7)
 const a = 1,
